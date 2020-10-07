@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+:root{
+    --paleBlue: hsl(243, 100%, 93%);
+    --grayishBlue: hsl(229, 7%, 55%);
+    --darkBlue: hsl(228, 56%, 26%);
+    --veryDarkBlue: hsl(229, 57%, 11%);
+    --sliderGradient: linear-gradient(90deg,hsl(6, 100%, 80%) 0%, hsl(335, 100%, 65%) 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: url("images/bg-mobile.png") no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--grayishBlue);
+}
+
+.logo-btns{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    width: 100%;
+    background: var(--darkBlue);
+    border-radius: 10px 90px 10px 10px;
+}
+
+.logo-div{
+    margin-bottom: 30px;
+}
+
+.sub-icons{
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    width: 150px;
+}
+
+.document-div, .folder-div, .upload-div{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: var(--veryDarkBlue);
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+
+.rest{
+    position: relative;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 30px;
+    width: 100%;
+    background: var(--darkBlue);
+    border-radius: 10px;
+}
+
+
+.hwMuch{
+    color: var(--paleBlue);
+    font-weight: 400;
+}
+
+.nb{
+    font-weight: 700;
+    color: var(--paleBlue);
+}
+
+.left{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.slider{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+    padding: 3px;
+    background: #151d4b;
+    margin: 10px 0;
+}
+
+.slider-inside{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    background: var(--sliderGradient);
+    border-radius: 10px;
+    padding: 2px;
+}
+
+.ball{
+    width: 10px;
+    height: 10px;
+    background: var(--paleBlue);
+    border-radius: 50%;
+}
+
+.zeroN{
+    display: flex;
+    justify-content: space-between;
+}
+
+.GBLeft{
+    position: absolute;
+    bottom: -25%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 70px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-weight: 700;
+    color: var(--grayishBlue);
+    background: #fff;
+    text-transform: uppercase;
+}
+
+.gb-left{
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--veryDarkBlue);
+    margin-right: 10px;
+}
+
+.gb-tail{
+    height: 0px;
+    width: 0px;
+}
+
+
+/* ========================= MEDIA QUERIES ============================== */
+
+@media (min-width: 760px){
+
+    body{
+        width: 100%;
+        height: 100vh;
+        background: var(--veryDarkBlue);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body::before{
+        content: '';
+        width: 100%;
+        height: 50vh;
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
+        background: url("images/bg-desktop.png") no-repeat;
+        background-size: cover;
+    }
+
+    .container{
+        max-width: 650px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        color: var(--grayishBlue);
+    }
+
+    .logo-btns{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 30px 20px;
+        width: 250px;
+        background: var(--darkBlue);
+        border-radius: 10px 90px 10px 10px;
+    }
+
+    .document-div, .folder-div, .upload-div{
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background: var(--veryDarkBlue);
+        border-radius: 10px;
+        margin-right: 10px;
+    }
+
+    .rest{
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+        width: 380px;
+        background: var(--darkBlue);
+        border-radius: 10px;
+    }
+    
+
+    .text{
+        text-align: left;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    
+    .GBLeft{
+        position: absolute;
+        top: -30%;
+        left: 17%;
+        transform: translateX(55%);
+        height: 70px;
+        width: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        font-weight: 700;
+        color: var(--grayishBlue);
+        background: #fff;
+        text-transform: uppercase;
+    }
+
+    .GBLeft::after{
+        content: '';
+        position: absolute;
+        border-top: 30px solid #fff;
+        border-left: 30px solid transparent;
+        bottom: -20px;
+        right: 0;
+    }
+
+
+}
+
+@media (min-width: 1024px){
+
+    body{
+        width: 100%;
+        height: 100vh;
+        background: var(--veryDarkBlue);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body::before{
+        content: '';
+        width: 100%;
+        height: 50vh;
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
+        background: url("images/bg-desktop.png") no-repeat;
+        background-size: cover;
+    }
+
+    .container{
+        max-width: 780px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        color: var(--grayishBlue);
+    }
+
+    .logo-btns{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 35px 25px;
+        width: 325px;
+        background: var(--darkBlue);
+        border-radius: 10px 90px 10px 10px;
+    }
+
+    .document-div, .folder-div, .upload-div{
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background: var(--veryDarkBlue);
+        border-radius: 10px;
+        margin-right: 10px;
+    }
+
+    .rest{
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 40px 20px 40px;
+        width: 425px;
+        background: var(--darkBlue);
+        border-radius: 10px;
+    }
+
+
+    .text{
+        text-align: left;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    
+    .GBLeft{
+        position: absolute;
+        top: -30%;
+        left: 24%;
+        transform: translateX(55%);
+        height: 70px;
+        width: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        font-weight: 700;
+        color: var(--grayishBlue);
+        background: #fff;
+        text-transform: uppercase;
+    }
+
+    .GBLeft::after{
+        content: '';
+        position: absolute;
+        border-top: 30px solid #fff;
+        border-left: 30px solid transparent;
+        bottom: -20px;
+        right: 0;
+    }
+
+
+}
+
+@media (min-width: 1420px){
+    .container{
+        max-width: 930px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        color: var(--grayishBlue);
+    }
+
+    .logo-btns{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 40px;
+        width: 360px;
+        background: var(--darkBlue);
+        border-radius: 10px 90px 10px 10px;
+    }
+
+    .document-div, .folder-div, .upload-div{
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background: var(--veryDarkBlue);
+        border-radius: 10px;
+        margin-right: 10px;
+    }
+
+    .rest{
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 40px 20px 40px;
+        width: 535px;
+        background: var(--darkBlue);
+        border-radius: 10px;
+    }
+
+    .GBLeft{
+        position: absolute;
+        top: -30%;
+        left: 40%;
+    }
+
+
+}
